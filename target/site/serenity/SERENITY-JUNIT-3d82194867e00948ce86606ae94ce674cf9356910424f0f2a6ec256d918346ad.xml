@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="As a user I should be able to login to GPS." skipped="0" tests="2" time="27.95" timestamp="2018-10-04 05:16:01"><testcase name="Login with correct credentials"/><testcase name="Login with incorrect credentials"/></testsuite>

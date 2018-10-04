@@ -1,0 +1,5 @@
+runner\Runner.class
+mindfire\serenity\serenity_pages\GpsHomePage.class
+mindfire\serenity\serenity_steps\GpsUser.class
+mindfire\serenity\serenity_stepdefination\LoginSteps.class
+mindfire\serenity\serenity_pages\LoginPage.class
