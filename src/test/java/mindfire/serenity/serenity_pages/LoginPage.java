@@ -38,9 +38,7 @@ public class LoginPage extends PageObject {
 	}
 
 	public void PressLogin() {
-
 		login.click();
-
 	}
 
 	public void invalidCredentialMessageShouldCome() {
