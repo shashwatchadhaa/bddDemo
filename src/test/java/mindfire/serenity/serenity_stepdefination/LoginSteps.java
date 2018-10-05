@@ -16,36 +16,36 @@ public class LoginSteps {
 		user.open_GPS_Login_Page();
 	}
 
-	@When("^User enters \"([^\"]*)\" as username\\.$")
-	public void user_enters_as_username(String username) {
-		user.enter_Username( username);
-	}
-	
+	@When("^He enters \"([^\"]*)\"\\.$")
+	public void he_enters(String username) {
 
-	@When("^Press login button\\.$")
-	public void press_login_button() {
-		user.press_Login_button();
+		user.enter_Username(username);
 	}
-	
-	@When("^User enters \"([^\"]*)\" as password\\.$")
-	public void user_enters_as_password(String password) {
+
+	@When("^enters \"([^\"]*)\" \\.$")
+	public void enters(String password) {
 		user.enter_Password(password);
 	}
 
-	
+	@When("^Press login \\.$")
+	public void press_login() {
+		user.press_Login_button();
+	}
 
-	@Then("^He should be successfully logged into GPS\\.$")
-	public void he_should_be_successfully_logged_into_GPS() {
+	@Then("^He should be successfully logged in\\.$")
+	public void he_should_be_successfully_logged_in() {
 		user.successfully_login_to_application();
 	}
-	@Then("^Invalid credential message should come\\.$")
-	public void invalid_credential_message_should_come() {
-	    user.should_get_invalid_credentials_message();
+
+	@Then("^He should not be logged in\\.$")
+	public void he_should_not_be_logged_in() {
+
+		user.should_be_on_login_page();
 	}
 
-	@Then("^User should not be logged in\\.$")
-	public void user_should_not_be_logged_in() {
-	    user.should_be_on_login_page();
+	@Then("^Invalid credential message should come\\.$")
+	public void invalid_credential_message_should_come() {
+		user.should_get_invalid_credentials_message();
 	}
 
 }

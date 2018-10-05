@@ -7,7 +7,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features = { "src/test/resources/feature" }, glue = {
-		"mindfire.serenity.serenity_stepdefination" },
+		"mindfire.serenity.serenity_stepdefination" }, 
 
 		dryRun = false
 

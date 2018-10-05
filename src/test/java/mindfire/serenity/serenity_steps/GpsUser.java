@@ -13,36 +13,37 @@ public class GpsUser {
 	LoginPage loginPage;
 	GpsHomePage homePage;
 
-	@Step
+	@Step("Open our goal plan login page")
 	public void open_GPS_Login_Page() {
 		loginPage.openUrl("http://ourgoalplan.com/Login.aspx");
 		
 	}
-	@Step
+	@Step("User enter username")
 	public void enter_Username(String username) {
 		
 		loginPage.setUsername(username);
 	}
-	@Step
+	@Step("User enter password")
 	public void enter_Password(String password) {
 	
 		loginPage.setPassword(password);
 	}
-	@Step
+	@Step("User is logged into the application.")
 	public void successfully_login_to_application() {
 		homePage.verifyLogin();
 		
 	}
-	@Step
+	@Step("User press login button")
 	public void press_Login_button() {
 	
 		loginPage.PressLogin();
 	}
-	@Step
+	@Step("User should see invalid credentials message")
 	public void should_get_invalid_credentials_message() {
 		loginPage.invalidCredentialMessageShouldCome();
 		
 	}
+	@Step("User should be on Login page.")
 	public void should_be_on_login_page() {
 		
 		homePage.shouldNotLoad();
